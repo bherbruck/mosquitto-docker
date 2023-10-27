@@ -1,0 +1,9 @@
+services:
+  mosquitto:
+    build: .
+    ports:
+      - 1883:1883
+    environment:
+      - MQTT_USERNAME=mosquitto
+      - MQTT_PASSWORD=mosquitto
+      - MQTT_PORT=1883
