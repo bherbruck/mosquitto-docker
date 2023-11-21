@@ -12,6 +12,7 @@ fi
 # Create the Mosquitto password file
 echo -n "$MQTT_USERNAME:" >/mosquitto/config/passwd
 mosquitto_passwd -b -c /mosquitto/config/passwd "$MQTT_USERNAME" "$MQTT_PASSWORD"
+chmod 0700 /mosquitto/config/passwd
 
 # Set the Mosquitto configuration
 cat <<EOF >/mosquitto/config/mosquitto.conf
